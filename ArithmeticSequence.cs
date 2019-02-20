@@ -6,12 +6,18 @@ namespace PadawansTask2
     {
         public static int Calculate(int number, int add, int count)
         {
-            int nextElem = number, nextSum = number;
-            for (int i = 0; i < count-1; i++) {
-                nextElem += add;
-                nextSum += nextElem;
+            try { 
+                int nextElem = number, nextSum = number;
+                for (int i = 0; i < count - 1; i++) {
+                    nextElem += add;
+                    nextSum += nextElem;
+                }
+                return nextSum;
             }
-            return nextSum;
+            catch (NotImplementedException)
+            {
+                Console.WriteLine();
+            }
             throw new NotImplementedException();
         }
     }
